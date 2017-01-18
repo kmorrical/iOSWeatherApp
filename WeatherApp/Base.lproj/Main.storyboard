@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obhostel" translatesAutoresizingMaskIntoConstraints="NO" id="L8t-i8-nX4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zch-fj-Sgj">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <color key="barTintColor" red="0.0" green="0.50761718749999996" blue="0.52670200889999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWS-lD-7ct">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.50761718749999996" blue="0.52670200889999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aac-Ab-oTK">
+                                <rect key="frame" x="148" y="134" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jB6-EN-7MB">
+                                <rect key="frame" x="159" y="163" width="58" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for a City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ya6-K4-Bm8">
+                                <rect key="frame" x="89" y="96" width="198" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sDV-lG-o2c">
+                                <rect key="frame" x="240" y="165" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="8BU-yl-rFu"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="FQf-Dt-OHi"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="KlQ-B4-r4D"/>
+                                    <constraint firstAttribute="height" constant="65" id="Xll-It-O9n"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sDV-lG-o2c" firstAttribute="leading" secondItem="jB6-EN-7MB" secondAttribute="trailing" constant="23" id="017-3k-DCE"/>
+                            <constraint firstItem="Zch-fj-Sgj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AZ7-IY-A5b"/>
+                            <constraint firstItem="aac-Ab-oTK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B6m-6f-1TX"/>
+                            <constraint firstItem="L8t-i8-nX4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dlq-Li-KZL"/>
+                            <constraint firstItem="Ya6-K4-Bm8" firstAttribute="top" secondItem="Zch-fj-Sgj" secondAttribute="bottom" constant="32" id="E6P-f2-3Z7"/>
+                            <constraint firstAttribute="trailing" secondItem="L8t-i8-nX4" secondAttribute="trailing" id="FO7-J0-kZN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sDV-lG-o2c" secondAttribute="bottom" constant="437" id="J3Y-OT-0en"/>
+                            <constraint firstItem="jB6-EN-7MB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KCd-G2-k1e"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sDV-lG-o2c" secondAttribute="bottom" constant="436" id="L9J-jr-c6X"/>
+                            <constraint firstItem="Zch-fj-Sgj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NYr-1S-Ql9"/>
+                            <constraint firstItem="sDV-lG-o2c" firstAttribute="top" secondItem="Ya6-K4-Bm8" secondAttribute="bottom" constant="39" id="Nsj-01-zW3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sDV-lG-o2c" secondAttribute="bottom" constant="437" id="Ntj-Yw-Rvj"/>
+                            <constraint firstAttribute="trailing" secondItem="Zch-fj-Sgj" secondAttribute="trailing" id="PfS-aI-MFt"/>
+                            <constraint firstItem="Ya6-K4-Bm8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z9z-o7-l08"/>
+                            <constraint firstItem="aac-Ab-oTK" firstAttribute="top" secondItem="Ya6-K4-Bm8" secondAttribute="bottom" constant="8" id="ZOR-ti-gmx"/>
+                            <constraint firstItem="jB6-EN-7MB" firstAttribute="top" secondItem="aac-Ab-oTK" secondAttribute="bottom" constant="8" id="eeg-c7-2lp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sDV-lG-o2c" secondAttribute="bottom" constant="436" id="jGm-e1-sSa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sDV-lG-o2c" secondAttribute="bottom" constant="436" id="pvg-Tz-ylx"/>
+                            <constraint firstItem="L8t-i8-nX4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sCj-0O-Znh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sDV-lG-o2c" secondAttribute="bottom" constant="437" id="tDX-RX-AGj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sDV-lG-o2c" secondAttribute="bottom" constant="437" id="woi-4E-eX8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L8t-i8-nX4" secondAttribute="bottom" id="yHi-Hf-wCG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLbl" destination="Ya6-K4-Bm8" id="IxO-sy-Iku"/>
+                        <outlet property="conditionLbl" destination="aac-Ab-oTK" id="DQz-w7-akI"/>
+                        <outlet property="degreeLbl" destination="jB6-EN-7MB" id="mRh-46-kYT"/>
+                        <outlet property="imgView" destination="sDV-lG-o2c" id="R5H-FK-Va6"/>
+                        <outlet property="searchBar" destination="Zch-fj-Sgj" id="IJM-IW-xTt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.5" y="138.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="obhostel" width="259" height="460"/>
+    </resources>
 </document>
